@@ -1,0 +1,260 @@
+.App {
+  text-align: center;
+}
+
+/* spining Wheel */
+.wheel-container {
+  display: block;
+  position: relative;
+  box-sizing: content-box;
+  width: 330px;
+  padding: 30px 0 60px;
+  margin: auto;
+  user-select: none;
+  background: url('../images/Spin_the_Wheel-bg.png') no-repeat center top;
+}
+
+.wheel-container::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: 2;
+  border-radius: 50%;
+  right: 0;
+  bottom: 0;
+  background: url('../images/pointer.png') no-repeat center top;
+}
+
+.wheel::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  z-index: 2;
+  border-radius: 50%;
+  right: -2px;
+  bottom: -2px;
+  background: url('../images/bg-top-wheel.png') no-repeat center/cover;
+}
+
+#spin_button {
+  background: url('../images/spin.png') no-repeat center;
+  color: #edc900;
+  font-size: 24px;
+  border: 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  top: 33%;
+  z-index: 2;
+  left: 50%;
+  padding: 30px 10px 40px;
+  line-height: 1;
+  font-weight: 800;
+  width: 120px;
+  height: 120px;
+  margin: 0 0 0 -60px;
+  position: absolute;
+  outline: none;
+}
+
+#spin_button span {
+  font-size: 12px;
+}
+
+#spin_button:focus {
+  outline: none;
+}
+
+.wheel {
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 330px;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: solid #2879b9 0;
+  background-color: #ffffff;
+  transition: transform 0.25s;
+  transform: rotate(0deg);
+  cursor: pointer;
+}
+
+.wheel.spinning {
+  transition: transform 2s;
+  transform: rotate(
+    calc(3 * 360deg + (-360deg * var(--selected-item) / var(--nb-item, 1)))
+  );
+}
+
+.wheel-item {
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform-origin: center left;
+  transform: translateY(-50%)
+    rotate(calc((var(--item-nb) - 2) * (360deg / var(--nb-item, 1))));
+  color: #ffffff;
+  text-align: right;
+  padding: 0 25px 0 50px;
+  font-weight: 700;
+}
+
+.wheel-item span {
+  text-align: center;
+  display: block;
+  line-height: 1.1;
+  transform: rotate(90deg);
+  margin-right: -25px;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.wheel-item:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 0px;
+  --slice-max-width: calc(var(--PI) * 400px + 400px / 2);
+  --slice-width: calc((var(--slice-max-width) / var(--nb-item)) - 18px);
+  border: solid transparent calc(var(--slice-width) / 2);
+  border-left: solid transparent 27px;
+  border-right: solid #400b36 calc(400px / 2);
+}
+
+.wheel-item:nth-child(1):before {
+  border-right-color: #400b36;
+}
+
+.wheel-item:nth-child(2):before {
+  border-right-color: #ff8b00;
+}
+
+.wheel-item:nth-child(3):before {
+  border-right-color: #04756e;
+}
+
+.wheel-item:nth-child(4):before {
+  border-right-color: #400b36;
+}
+
+.wheel-item:nth-child(5):before {
+  border-right-color: #ff8b00;
+}
+
+.wheel-item:nth-child(6):before {
+  border-right-color: #04756e;
+}
+
+:root {
+  --selected-item: 0;
+  --nb-item: 0;
+  --item-nb: 0;
+  --PI: 3.14159265358979;
+}
+
+.republic-day-Heading {
+  color: #561249;
+  font-size: 55px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.bg-republic-day {
+  background: url(../images/bg-republic-day.jpg) no-repeat center/cover;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.modalRepublicDay .modal-body .btn,
+.bg-republic-day .btn {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.modalRepublicDay .modal-body .btn-danger,
+.bg-republic-day .btn-danger {
+  background-image: linear-gradient(180deg, #b60020 0%, #840017 100%);
+  border: 0;
+}
+
+.bg-republic-day img {
+  max-width: 100%;
+}
+
+.modalRepublicDay .modal-body {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  background: url(../images/bg-republic-day.jpg) no-repeat center/cover;
+  border: 0;
+  border-radius: 4px;
+  color: #000;
+  font-weight: 600;
+}
+
+.modalRepublicDay .modal-body h4 {
+  font-weight: 700;
+  color: #020088;
+}
+
+.modalRepublicDay a.close-btn {
+  right: 5px;
+  top: 5px;
+  position: absolute;
+  content: '';
+  background: url(../images/cross.png) no-repeat center;
+  width: 26px;
+  height: 26px;
+  z-index: 9;
+  cursor: pointer;
+  font-size: 0;
+  text-indent: -9999px;
+  background-size: 16px auto;
+}
+
+.modalRepublicDay .modal-body figcaption h4 {
+  font-size: 50px;
+}
+
+.modalRepublicDay .modal-body h3 {
+  font-weight: 600;
+}
+
+@media (min-width: 992px) {
+  .btn-list {
+    margin-top: -20px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .republic-day-Heading br {
+    display: none;
+  }
+
+  .republic-day-Heading {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .btn-list .list-inline-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .republic-day-Heading {
+    font-size: 20px;
+  }
+}

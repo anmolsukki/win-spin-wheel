@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/App.css" />
+
+    <title>Buy E Gift Vouchers, E Gift Cards Online| GyFTR.com</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="container-fluid">
+      <div id="root"></div>
+    </div>
+
+    <!-- Terms & Conditions -->
+    <div class="modal modalRepublicDay" id="Modal-tc" tabindex="-1" aria-labelledby="Modal-tcLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <a class="close-btn" data-dismiss="modal">close</a>
+          <div class="modal-body">
+            <h4>Terms & Conditions</h4>
+            <ol class="pl-4 m-0">
+              <li class="pb-1">
+                Every registered user gets one chance to participate in this contest.?
+              </li>
+              <li class="pb-1">
+                After spinning the wheel, a user gets 24 hours to purchase vouchers worth Rs. 5000 to claim the prize.
+              </li>
+              <li class="pb-1">
+                A user needs to purchase vouchers worth Rs. 5000 of brands other than Amazon, Flipkart, Tanishq, Easy Insurance India, and HP Petro to be eligible for this contest.
+              </li>
+              <li class="pb-1">
+                A user needs to purchase the gift vouchers using these payment modes to avail the offer: Debit Card, Credit Card, Net Banking, and PayTM.
+              </li>
+              <li class="pb-1">
+                Payments made via GyFTR Pay are not eligible for this cashback offer.
+              </li>
+              <li class="pb-1">
+                The cashback will be credited in the user’s GyFTR Pay wallet on 26th January 2021.
+              </li>
+              <li class="pb-1">
+                The validity of the cashback credited to the account is 30 days.
+              </li>
+              <li class="pb-1">
+                For any query or offer-related issues, get in touch with us www.gyftr.com/contact/get-in- or call us at 1800- 1033-314.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How to Participate -->
+    <div class="modal modalRepublicDay" id="Modal-hp" tabindex="-1" aria-labelledby="Modal-hpLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <a class="close-btn" data-dismiss="modal">close</a>
+          <div class="modal-body">
+            <h4>How to Participate</h4>
+            <ul class="pl-4 m-0">
+              <li class="pb-1">
+                Login/Register on GyFTR using your mobile number and PIN.
+              </li>
+              <li class="pb-1">
+                Spin The Wheel by pressing the “SPIN” button.
+              </li>
+              <li class="pb-1">
+                You will win what the arrow points to when the wheel stops.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How to Redeem -->
+    <div class="modal modalRepublicDay" id="Modal-hr" tabindex="-1" aria-labelledby="Modal-hrLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <a class="close-btn" data-dismiss="modal">close</a>
+          <div class="modal-body">
+            <h4>How to Claim your Reward</h4>
+            <ul class="pl-4 m-0">
+              <li class="pb-1">
+                Login/Register on GyFTR using your mobile number and PIN.
+              </li>
+              <li class="pb-1">
+                Make a transaction of Rs. 5,000 or more within 24 hours of spinning the wheel.
+              </li>
+              <li class="pb-1">
+                The cashback you have won will be credited on 26th January 2021 in your Gyftr Pay Wallet.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--thanks -->
+    <div class="modal modalRepublicDay" id="Modal-thanks" tabindex="-1" aria-labelledby="Modal-thanksLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <a class="close-btn" data-dismiss="modal">close</a>
+          <div class="modal-body text-center">
+            <figure class="py-4">
+              <img src="images/tr.png" />
+              <figcaption class="pt-3">
+                <h3 class="m-0">Congratulations!</h3>
+                <div class="py-4">
+                  <p class="m-0">You’ve won</p>
+                  <h4 class="m-0">₹ 500</h4>
+                  <p class="m-0">CASHBACK</p>
+                </div>
+                <button type="button" class="btn btn-danger px-4 mt-3">
+                  CLAIM YOUR CASHBACK
+                </button>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
