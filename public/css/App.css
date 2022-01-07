@@ -86,7 +86,7 @@
 .wheel.spinning {
   transition: transform 2s;
   transform: rotate(
-    calc(3 * 360deg + (-360deg * var(--selected-item) / var(--nb-item, 1)))
+    calc(9 * 360deg + (-315deg * var(--selected-item) / var(--nb-item, 1)))
   );
 }
 
